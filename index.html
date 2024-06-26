@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Chat - Realtime chat application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+<body>
+    <div id="popupBox">
+        <div class="my-modal">
+            <h3 style="text-align: center;">Web Chat</h3>
+            <label for="userName">Enter Name :</label>
+            <br>
+            <input type="text" name="userName" id="userName" placeholder="Your name here..." required maxlength="30">
+            <br>
+            <button class="button" id="submitName">Enter</button>
+            <p style="font-size: small; color: gray; text-align: right;"><i>~Created by Mahesh</i></p>
+        </div>
+    </div>
+
+    
+    <header>
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="chat-icon.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    <b>Web Chat</b>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div>
+            <h2 style="color: white; text-align: center; margin: 20px 0px 10px 0px;">Welcome to Web Chat</h2>
+            <span id="nameTag"></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="member-class"><span style="color: red;"><b>Members: </b></span><span id="allmembers"></span></div>
+        <div class="msgBox"></div>
+        <div class="sendMsg">
+            <input type="text" name="inputText" id="inputText" placeholder="Type Here...">
+            <button class="button" id="sendBtn">Send</button>
+        </div>
+    </div>
+
+
+    <footer>
+        <div>
+            Copyright &copy; <script>let dt = new Date().getFullYear(); document.write(dt)</script> - Developed by <i>Mahesh</i>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+</body>
+</html>
+
+

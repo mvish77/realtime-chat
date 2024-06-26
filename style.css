@@ -1,0 +1,176 @@
+body{
+    background-color: rgb(12, 12, 12);
+}
+
+.msgBox{
+    background: url('wall.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid rgb(53, 53, 53);
+    height: 70vh;
+    margin: 20px 40px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.message{
+    width: fit-content;
+    margin: 10px 20px;
+}
+.left .textbox{
+    background-color: rgba(87, 86, 86, 0.911);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px 20px 20px 0px;
+}
+.left{
+    float: left;
+    clear: both;
+}
+.right{
+    float: right;
+    clear: both;
+}
+
+.right .textbox{
+    background-color: rgba(87, 86, 86, 0.911);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px 20px 0px 20px;
+}
+.right .username{
+    float: right;
+}
+
+.message .username{
+    color: white;
+    font-size: small;
+} 
+
+.center{
+    background-color: rgba(87, 86, 86, 0.911);
+    color: white;
+    padding: 7px 20px;
+    border-radius: 20px;
+    float: none;
+    clear: both;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sendMsg{
+    margin: 20px 40px;
+    display: flex;
+    flex-direction: row;
+
+}
+input[type='text']{
+    background-color: rgb(29, 29, 29);
+    border: none;
+    flex: 1;
+    padding: 7px;
+    color: white;
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.button{
+    padding: 7px 15px;
+    border: none;
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+#popupBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.726);
+}
+.my-modal{
+    width: 360px;
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 20px;
+    height: 230px;
+    color: white;
+    padding: 20px;
+    box-shadow: 10px 10px 60px rgba(85, 85, 85, 0.315), inset 10px 10px 20px rgba(80, 80, 80, 0.205)
+}
+
+.my-modal #userName{
+    margin: 10px 0px;
+    width: 100%;
+}
+.my-modal #submitName{
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+}
+
+.button:hover{
+    background-color: rgb(61, 61, 61);
+    color: white;
+}
+
+footer{
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+@media screen and (max-width:400px) {
+    .sendMsg{
+        margin: 10px 0px;    
+    }
+    
+    .msgBox{
+        margin: 20px 0px;
+    }
+}
+/* <span id="your-status">•</span> */
+#nameTag{
+    color: white;
+    text-align: center;
+    margin-left: 40px;
+}
+
+#nameTag::before{
+    content: "• ";
+    font-size: 1.2em;
+    padding-top: 5px;
+    animation: k1 1s infinite;
+    transition: all;
+}
+
+@keyframes k1{
+    0%{
+        color: rgb(146, 255, 96);
+    }
+    50%{
+        color: rgb(0, 180, 0);
+    }
+    100%{
+        color: rgb(146, 255, 96);
+    }
+}
+
+.member-class{
+    border: 2px solid rgb(53, 53, 53);
+    margin: 0px 40px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
